@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/abstract_executor.h
+storage.h
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/storage.h
+
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/seq_scan_executor.h
+vector
+-
+abstract_executor.h
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/abstract_executor.h
+storage.h
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/storage.h
+
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/storage.h
+string
+-
+vector
+-
+
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/test/seq_scan_test.cpp
+iostream
+-
+string
+-
+vector
+-
+../include/seq_scan_executor.h
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/include/seq_scan_executor.h
+

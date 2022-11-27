@@ -1,0 +1,10 @@
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/rebuild_cache.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/edit_cache.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/complex-test.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/hash-join-test.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/nested-loop-join-test.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/filter-seq-scan-test.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/CMakeFiles/seq-scan-test.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/src/CMakeFiles/edit_cache.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/src/CMakeFiles/rebuild_cache.dir
+/common/home/sk2656/scratch/539/539_Query_Execution/CS539-p2/build/src/CMakeFiles/EXECUTOR.dir

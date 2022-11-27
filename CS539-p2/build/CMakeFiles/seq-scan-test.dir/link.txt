@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3    CMakeFiles/seq-scan-test.dir/test/seq_scan_test.cpp.o  -o seq-scan-test  src/libEXECUTOR.a 
