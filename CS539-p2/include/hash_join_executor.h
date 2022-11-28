@@ -124,4 +124,8 @@ class HashJoinExecutor : public AbstractExecutor {
   AbstractExecutor *right_;
   SimpleHashJoinHashTable ht;
   SimpleHashFunction *hash_fn_;
+  int count;
+  bool goToNext;
+  //Vector to store all the tuples form right table for a hash value
+  std::vector<Tuple> tupleVector;
 };

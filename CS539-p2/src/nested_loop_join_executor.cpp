@@ -21,6 +21,7 @@ bool NestedLoopJoinExecutor::Next(Tuple *tuple) {
   //Object of class tuple
   Tuple tuple_left;
   Tuple tuple_right;
+  
 
   //Case when join_key_ is id
   if(join_key_ == "id"){
