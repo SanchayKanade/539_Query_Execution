@@ -15,6 +15,10 @@ void HashJoinExecutor::Init(){
   //To traverse left table
   Tuple tuple_left;
 
+  //It seems the hs table is not getting overwritten so the table keeps on appending
+  //Reinitializing ht
+  SimpleHashJoinHashTable refresh;
+  ht = refresh;
   //Creating hash table from left table during initialization so that we can use it int he next later
   while(left_->Next(&tuple_left)){
     //Generating hash value
@@ -31,23 +35,26 @@ void HashJoinExecutor::Init(){
 bool HashJoinExecutor::Next(Tuple *tuple) { 
   //Object of class tuple to parse right table and probing hash table
   //Tuple tuple_left;
-  Tuple tuple_right;
   
   
   if(goToNext){
-    
+    Tuple tuple_right;
     while(right_->Next(&tuple_right)){
     //calculating hash value for the right table
-    hash_t hashValue1 = hash_fn_->GetHash(tuple_right);
+    hash_t hashValue = hash_fn_->GetHash(tuple_right);
 
     //Storing tuples which are matching in hash value in the tupleVector
-    ht.GetValue(hashValue1, &tupleVector);
-    if(tupleVector.size()>1){
-      count = 1;
-      goToNext = false;
+    ht.GetValue(hashValue, &tupleVector);
+    if(!tupleVector.empty()){
+      Tuple res = tupleVector.front();
+      if(tupleVector.size()>1){
+        count = 1;
+        goToNext = false;
+      }
+      *tuple = Tuple(res.id, res.val1, res.val2);
+      return true;
     }
-    *tuple = Tuple(tupleVector.front());
-    return true;
+    
   }
   return false;
   } 
@@ -58,7 +65,7 @@ bool HashJoinExecutor::Next(Tuple *tuple) {
       goToNext = true;
     }
 
-    *tuple = Tuple(tupleVector[count]);
+    *tuple = Tuple(tupleVector[count-1]);
     return true;
   }
 

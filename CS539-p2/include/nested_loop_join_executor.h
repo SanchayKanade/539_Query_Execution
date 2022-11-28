@@ -37,4 +37,10 @@ class NestedLoopJoinExecutor : public AbstractExecutor {
   AbstractExecutor *left_;
   AbstractExecutor *right_;
   std::string join_key_;
+  
+  //a flag to check if we shoudl return or not
+  bool flag = false;
+
+  //A tuple to hold temp values of the left table
+  Tuple temp;
 };
